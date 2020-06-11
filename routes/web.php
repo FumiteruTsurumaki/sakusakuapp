@@ -26,8 +26,6 @@ Route::post('/create2', 'CreateController@create2_post');
 Route::get('/edit/edit', 'EditController@edit');
 Route::get('/update/{circle_id}', 'EditController@update');
 Route::post('/update/{circle_id}', 'EditController@update_post');
-// Route::get('/update2/{circle_id}', 'EditController@update2');
-// Route::post('/update2/{circle_id}', 'EditController@update2_post');
 Route::post('delete/{{circle_id}}','EditController@delete');
 Route::get('/lists', 'ListsController@lists');
 Route::post('/lists', 'ListsController@lists_post');
