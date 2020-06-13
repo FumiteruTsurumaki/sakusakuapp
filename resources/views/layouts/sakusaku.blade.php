@@ -34,7 +34,7 @@
 		 @if(Auth::check())
          <li><i class="fas fa-user-circle fa-fw fa-2x font"></i><a>{{$user->name}}</a></li>
          <li class="id"><a>{{$user->email}}</a></li>
-         <li class="logout"><a href="/edit/edit">保有サークル情報</a></li>
+         <li class="logout"><a href="/edit/edit">サークル情報</a></li>
          <li class="logout"><a href="/home">ログアウト</a></li>
          @else
          <li><i class="fas fa-user-circle fa-fw fa-2x font"></i><a>アカウント</a></li>

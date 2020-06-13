@@ -4,21 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-// use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Socialite;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-  public function redirectToProvider()
-  {
-    return Socialite::driver('google')->redirect();
-  }
-  public function handleProviderCallback()
-  {
-   $user = Socialite::driver('github')->user();
-
-   // $user->token;
-  }
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -30,7 +19,7 @@ class LoginController extends Controller
     |
     */
 
-//     use AuthenticatesUsers;
+    use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.

@@ -4,21 +4,18 @@
 	  <div id="sc_title">
 		<h1>サクッと作る</h1>
 	</div>
-<!-- 	<div class="sc_description"> -->
-<!-- 		<h2>アカウント情報を入力しよう</h2> -->
-<!-- 	</div> -->
 	<form method="POST" action="/create1">
 	@csrf
 	   @if (count($errors) > 0)
    <div>
        <ul>
            @foreach ($errors->all() as $error)
-               <li>※{{ $error }}</li>
+               <li class="error">※{{ $error }}</li>
            @endforeach
        </ul>
    </div>
    @endif
-		<div class="search-description no-padding">
+		<div class="sc_description">
 			<h2>あなたの作りたいサークル情報を入力しよう</h2>
 		</div>
 		<table class="sc_box">

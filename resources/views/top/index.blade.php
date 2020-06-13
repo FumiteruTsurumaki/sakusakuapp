@@ -1,18 +1,4 @@
 @extends('layouts.sakusaku')
-@section('script')
-  <script>
-  $(function(){
-  $(".btn-dell").click(function(){
-  if(confirm("本当に削除しますか？")){
-  //そのままsubmit（削除）
-  }else{
-  //cancel
-  return false;
-  }
-  });
-  });
-  </script>
-@endsection
 @section('contents')
   <div id="main_img">
  		<div id="main-msg">
@@ -27,13 +13,13 @@
   <div id="lists">
   	<h1>新着サークル一覧</h1>
   	<ul id="lists_in">
-@foreach ($items as $item)
+		@foreach ($items as $item)
 			<li id="list">
   			<figure>
   				@isset ($item->image_1)
-  				<a href="/detail"><img src="{{ asset("/storage/$item->image_1") }}" alt="サークル画像"></a>
+  					<a href="/detail"><img src="{{ asset("/storage/$item->image_1") }}" alt="サークル画像"></a>
   				@else
-  				<a href="/detail"><img src="{{ asset ('images/noimage.png') }}" alt="画像がありません"></a>
+  					<a href="/detail"><img src="{{ asset ('images/noimage.png') }}" alt="画像がありません"></a>
   				@endisset
   			</figure>
 				<a class="name" href="/detail/{{$item->circle_id}}">{{$item->circle_name}}</a>
@@ -55,18 +41,18 @@
   			</div>
  				<ul class="points">
    				@php
-   				$point = explode ("," , $item->point);
+   					$point = explode ("," , $item->point);
    				@endphp<br>
    				@foreach($points as $val)
-   				@if(in_array($val->point_id, $point))
-   				<li>
-    					<p>{{$val->point}}</p>
-    				</li>
-    				@endif
-    				@endforeach
+     				@if(in_array($val->point_id, $point))
+       				<li>
+        				<p>{{$val->point}}</p>
+        			</li>
+     				@endif
+   				@endforeach
    			</ul>
 			</li>
-@endforeach
+		@endforeach
 		</ul>
 	</div>
 @endsection

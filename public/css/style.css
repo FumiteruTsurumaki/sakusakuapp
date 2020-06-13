@@ -601,6 +601,9 @@ input:focus {
 		    transform: translateY(0.1875em);
 		}
 /* 検索・作成ページ */
+.error {
+	color: #ff2600;
+}
 #sc {
 	width: 95%;
 	margin: 10px auto;

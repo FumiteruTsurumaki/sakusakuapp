@@ -25,7 +25,7 @@
            <select name="select_number">
            	<option value="">所属人数を選択する</option>
            	 @foreach ($number as $num)
-             <option value="{{$num -> number_id}}">{{$num -> number}}名</option>
+            	<option value="{{$num -> number_id}}">{{$num -> number}}名</option>
 						 @endforeach
            </select>
          </div>
@@ -52,10 +52,10 @@
 				<div class="selectlist">
 					<ul>
 						@foreach ($point as $poi)
- 						<li>
- 							<input type="checkbox" name="point[]" value="{{$poi -> point_id}}">
- 							<label>{{$poi -> point}}</label>
- 						</li>
+  						<li>
+  							<input type="checkbox" name="point[]" value="{{$poi -> point_id}}">
+  							<label>{{$poi -> point}}</label>
+  						</li>
  						@endforeach
  					</ul>
 				</div>
