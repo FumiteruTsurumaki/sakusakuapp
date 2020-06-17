@@ -33,3 +33,8 @@ Route::resource('/upload', 'UploadController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@login')->name('home');
+Route::get('/login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('/login/google/callback', 'Auth\LoginController@handleGoogleCallback');
+
+Route :: get ('/login/facebook', 'Auth\LoginController@redirectToFacebook' );
+Route :: get ('/login/facebook/callback', 'Auth\LoginController@handleFacebookCallback' );

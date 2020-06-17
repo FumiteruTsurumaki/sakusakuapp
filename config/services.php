@@ -31,9 +31,15 @@ return [
     ],
 
     'google' => [
-       'client_id' => env('859923411406-t6k7emiljdb7c0dumcntjq1rifkho8mv.apps.googleusercontent.com'),
-       'client_secret'  =>  env('1JLVPkLkqA1cphr3a-pfG3yO'),
-       'redirect'  =>  env('https://www.sakusaku-app.xyz/'),
+       'client_id' => env('GOOGLE_CLIENT_ID'),
+       'client_secret'  =>  env('GOOGLE_CLIENT_SECRET'),
+       'redirect'  =>  env('APP_URL') . '/login/google/callback',
     ],
+
+    'facebook'  =>  [
+     'client_id'  =>   env ('FACEBOOK_APP_ID'),
+     'client_secret'  =>  env ('FACEBOOK_APP_SECRET'),
+     'redirect'  =>  env('APP_URL') . '/login/facebook/callback',
+    ]
 
 ];
