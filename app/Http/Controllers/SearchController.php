@@ -11,32 +11,34 @@ use App\Point;
 
 class SearchController extends Controller
 {
- public function search(Request $request) {
-  $user = Auth::user();
-  $number = Number::all();
-  $genre = Genre::all();
-  $point = Point::all();
-  return view('search.search',['number' => $number, 'genre' => $genre, 'point' => $point,'user' => $user]);
- }
- public function search_post(Request $request)
- {
-  $points = Point::all();
-  $user = Auth::user();
-  $form = $request->all();
-  unset($form['_token']);
-  $genre = (array_key_exists('genre' , $form)) ? $form['genre'] : false;
-  $point = (array_key_exists('point' , $form)) ? $form['point'] : false;
 
-  $items = circle::universityEqual($form['keyword_input'])
-  ->Number($form['select_number'])
-  ->Genre($genre)
-  ->Point($point)
-  ->get();
-//   $points = implode( ",", $point );
-//   echo "<pre>";
-//   var_dump($items);
-//   echo "</pre>";
-//   exit();
-  return view('lists.lists', ['input' => $request->input, 'items' => $items,'user' => $user, 'points' => $points]);
- }
+  public function search() {
+    $user = Auth::user();
+    $number = Number::all();
+    $genre = Genre::all();
+    $point = Point::all();
+
+    return view('search.search',['user' => $user, 'number' => $number, 'genre' => $genre, 'point' => $point]);
+  }
+
+  public function search_post(Request $request)
+  {
+    $user = Auth::user();
+    $points = Point::all();
+
+    $form = $request->all();
+    unset($form['_token']);
+
+    $genre = (array_key_exists('genre' , $form)) ? $form['genre'] : false;
+    $point = (array_key_exists('point' , $form)) ? $form['point'] : false;
+
+    $items = circle::universityEqual($form['keyword_input'])
+    ->Number($form['select_number'])
+    ->Genre($genre)
+    ->Point($point)
+    ->get();
+
+    return view('lists.lists', ['user' => $user, 'points' => $points, 'input' => $request->input, 'items' => $items]);
+  }
+
 }

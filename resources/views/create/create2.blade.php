@@ -48,29 +48,29 @@
 		<tr>
 			<th>関連リンク</th>
   		<td>
-         <ul>
-         	<li class="link">
-           	<label>LINE</label>
-  					<input name="line" class="keyword_input" placeholder="URLを入力してください" type="text">
-  				</li>
-  				<li class="link">
-  					<label>Twitter</label>
-  					<input name="twitter" class="keyword_input" placeholder="URLを入力してください" type="text">
-  				</li>
-  				<li class="link">
-  					<label>Instagram</label>
-  					<input name="instagram" class="keyword_input" placeholder="URLを入力してください" type="text">
-  				</li>
-  				<li class="link">
-  					<label>Facebook</label>
-  					<input name="facebook" class="keyword_input" placeholder="URLを入力してください" type="text">
-  				</li>
-  				<li class="link">
-  					<label>Blog</label>
-  					<input name="blog" class="keyword_input" placeholder="URLを入力してください" type="text">
-         	</li>
-         </ul>
-  			</td>
+        <ul>
+        	<li class="link">
+          	<label>LINE</label>
+  				<input name="line" class="keyword_input" placeholder="URLを入力してください" type="text">
+  			</li>
+  			<li class="link">
+  				<label>Twitter</label>
+  				<input name="twitter" class="keyword_input" placeholder="URLを入力してください" type="text">
+  			</li>
+  			<li class="link">
+  				<label>Instagram</label>
+  				<input name="instagram" class="keyword_input" placeholder="URLを入力してください" type="text">
+  			</li>
+  			<li class="link">
+  				<label>Facebook</label>
+  				<input name="facebook" class="keyword_input" placeholder="URLを入力してください" type="text">
+  			</li>
+  			<li class="link">
+  				<label>Blog</label>
+  				<input name="blog" class="keyword_input" placeholder="URLを入力してください" type="text">
+        	</li>
+        </ul>
+  		</td>
    	</tr>
 		<tr>
 			<th>PR文</th>

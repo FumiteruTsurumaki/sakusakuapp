@@ -22,12 +22,12 @@
   			</div>
   			<div class="list-school">
   				<label><i class="fas fa-school fa-fw"></i></label>
-  					<ul>
-  						<li>{{$item->university_1}}</li>
-  						<li>{{$item->university_2}}</li>
-  						<li>{{$item->university_3}}</li>
-  						<li>{{$item->university_4}}</li>
-  					</ul>
+ 					<ul>
+ 						<li>{{$item->university_1}}</li>
+ 						<li>{{$item->university_2}}</li>
+ 						<li>{{$item->university_3}}</li>
+ 						<li>{{$item->university_4}}</li>
+ 					</ul>
   			</div>
  				<ul class="points">
    				@php

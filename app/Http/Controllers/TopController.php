@@ -18,11 +18,4 @@ class TopController extends Controller
      return view('top.index',['user' => $user, 'points' => $points, 'items' => $items]);
   }
 
-  public function index_post(Request $request) {
-     $points = Point::all();
-     $items  = circle::all();
-
-     return view('top.index',['points' => $points, 'items' => $items]);
-  }
-
 }

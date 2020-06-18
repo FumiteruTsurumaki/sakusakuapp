@@ -56,7 +56,7 @@
     				@endforeach
    			</ul>
    			<div class="edit">
-     			<a href="/update/{{$circle->circle_id}}">編集|</a>
+     			<a href="/update/{{$circle->circle_id}}">編集</a>
      			<form action="/delete/{{$circle->circle_id}}" method="POST">
               @csrf
               @method('DELETE')
