@@ -77,16 +77,13 @@
   		<dt>関連リンク</dt>
   		<dd>
   			<ul>
-  					<li>LINE:<a>{{$item->line}}</a></li>
-  					<li>Twitter:<a>{{$item->twitter}}</a></li>
-  					<li>Instagram:<a>{{$item->instagram}}</a></li>
-  					<li>Facebook:<a>{{$item->facebook}}</a></li>
-  				</ul>
+ 					<li>LINE:<a href="{{$item->line}}">{{$item->line}}</a></li>
+ 					<li>Twitter:<a href="{{$item->twitter}}">{{$item->twitter}}</a></li>
+ 					<li>Instagram:<a href="{{$item->instagram}}">{{$item->instagram}}</a></li>
+ 					<li>Facebook:<a href="{{$item->facebook}}">{{$item->facebook}}</a></li>
+  			</ul>
   		</dd>
   	</dl>
-		<div class="contact-button">
-			<a class="button-large">一覧に戻る</a>
-		</div>
 	</div>
 </div>
 @endsection

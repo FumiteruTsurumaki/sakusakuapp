@@ -6,6 +6,7 @@
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.css">
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick-theme.min.css">
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="{{ asset('/css/style.css') }}">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.js"></script>
@@ -34,8 +35,13 @@
 		 @if(Auth::check())
          <li><i class="fas fa-user-circle fa-fw fa-2x font"></i><a>{{$user->name}}</a></li>
          <li class="id"><a>{{$user->email}}</a></li>
-         <li class="logout"><a href="/edit/edit">保有サークル情報</a></li>
-         <li class="logout"><a href="/home">ログアウト</a></li>
+         <li class="logout"><a href="/edit/edit">サークル情報</a></li>
+         <li class="logout"><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                   document.getElementById('logout-form').submit();">ログアウト</a>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+         @csrf
+         </form>
+         </li>
          @else
          <li><i class="fas fa-user-circle fa-fw fa-2x font"></i><a>アカウント</a></li>
          <li class="id"><a href="/login">※ログインしていません。</a></li>
@@ -72,10 +78,6 @@
 		@yield('contents')
 	</div>
  	<footer>
-     <ul>
-        <li><a href="#">利用規約</a></li>
-        <li><a href="#">プライバシーポリシー</a></li>
-     </ul>
      <small>&copy; 2020. SakuSaku</small>
  	</footer>
 <script type="text/javascript">

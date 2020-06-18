@@ -26,10 +26,15 @@ Route::post('/create2', 'CreateController@create2_post');
 Route::get('/edit/edit', 'EditController@edit');
 Route::get('/update/{circle_id}', 'EditController@update');
 Route::post('/update/{circle_id}', 'EditController@update_post');
-Route::post('delete/{{circle_id}}','EditController@delete');
+Route::delete('/delete/{circle_id}','EditController@delete');
 Route::get('/lists', 'ListsController@lists');
 Route::post('/lists', 'ListsController@lists_post');
 Route::resource('/upload', 'UploadController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@login')->name('home');
+Route::get('/login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('/login/google/callback', 'Auth\LoginController@handleGoogleCallback');
+
+Route :: get ('/login/facebook', 'Auth\LoginController@redirectToFacebook' );
+Route :: get ('/login/facebook/callback', 'Auth\LoginController@handleFacebookCallback' );

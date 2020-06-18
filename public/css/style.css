@@ -27,7 +27,6 @@ input[type="checkbox" i] {
     cursor: default;
     -webkit-appearance: checkbox;
     box-sizing: border-box;
-    margin: 3px 0.5ex;
     padding: initial;
     border: initial;
 }
@@ -87,6 +86,45 @@ input:focus {
 		}
 .title-space {
 	padding: 90px 0 0 0;
+}
+/* ログイン */
+.or{
+	margin-top: 50px;
+}
+.or p {
+	margin-bottom: 4px;
+	text-align: center;
+	font-size: 18px;
+}
+.social-form {
+	margin: 10px auto;
+	display: flex;
+}
+.social-btn {
+	width: 273px;
+	height: 50px;
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+.google {
+	margin-top: 30px;
+	background-color: #4285f4;
+}
+.facebook {
+	background-color: #3b5998;
+}
+.social-btn-in {
+	height: 40px;
+	margin: 5px auto;
+}
+.social-btn-in a {
+	color: #fff;
+}
+.social-btn-in a:hover {
+	pointer-events: none;
+	text-decoration: none;
 }
 /* ドロワーメニュー */
 .overlay {
@@ -601,6 +639,9 @@ input:focus {
 		    transform: translateY(0.1875em);
 		}
 /* 検索・作成ページ */
+.error {
+	color: #ff2600;
+}
 #sc {
 	width: 95%;
 	margin: 10px auto;
