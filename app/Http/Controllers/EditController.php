@@ -100,9 +100,9 @@ class EditController extends Controller
 
   public function delete($circle_id)
   {
-   $items = circle::find($circle_id);
-   $items->delete();
-   return view('/');
+   circle::where('circle_id', $circle_id)->delete();
+
+   return redirect()->to('edit/edit');
   }
 
 }
