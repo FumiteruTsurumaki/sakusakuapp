@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'TopController@index');
-Route::post('/', 'TopController@index_post');
+// Route::post('/', 'TopController@index_post');
 Route::get('/detail/{circle_id}','DetailController@detail');
 Route::post('/detail', 'DetailController@detail_post');
 Route::get('/search', 'SearchController@search');
