@@ -19,19 +19,6 @@
  				</td>
 		</tr>
 		<tr>
-			<th>所属人数で探す</th>
-			<td>
-				<div class="scale">
-           <select name="select_number">
-           	<option value="">所属人数を選択する</option>
-           	 @foreach ($number as $num)
-            	<option value="{{$num -> number_id}}">{{$num -> number}}名</option>
-						 @endforeach
-           </select>
-         </div>
-       </td>
-		</tr>
-			<tr>
 			<th>ジャンルで探す</th>
 			<td>
 				<div class="search_genre">

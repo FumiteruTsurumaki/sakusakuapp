@@ -62,10 +62,6 @@
   		<p>{{$item->pr_text}}</p>
   	</div>
   	<dl id="about">
-  		<dt>所属人数</dt>
-  		<dd>{{$item->number}}</dd>
-  		<dt>設立年</dt>
-  		<dd>{{$item->create_year}}</dd>
   		<dt>活動場所</dt>
   		<dd>
   		  <ul>
