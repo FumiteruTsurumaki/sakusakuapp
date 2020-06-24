@@ -17,7 +17,7 @@
 			<li id="list">
   			<figure>
   				@isset ($item->image_1)
-  					<a href="/detail"><img src="{{ asset("/public_html/sakusakuapp/storage/app/public/$item->image_1") }}" alt="サークル画像"></a>
+  					<a href="/detail"><img src="{{ asset("/storage/$item->image_1") }}" alt="サークル画像"></a>
   				@else
   					<a href="/detail"><img src="{{ asset ('images/noimage.png') }}" alt="画像がありません"></a>
   				@endisset
