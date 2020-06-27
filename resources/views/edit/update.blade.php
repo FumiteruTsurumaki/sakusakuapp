@@ -77,10 +77,7 @@
 						@foreach ($points as $point)
             @php
             	$checked='';
-              $circle_point = explode(",",$circles->point);
-            	if(in_array($point->point_id, $circle_point)){
-            			$checked='checked="checked"';
-            	}
+            	var_dump($circles->points);
             @endphp
   						<li>
   							<input type="checkbox" name="point_id" value="{{$point -> point_id}}" {{$checked}}>

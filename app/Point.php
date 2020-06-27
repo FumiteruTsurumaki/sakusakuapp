@@ -10,12 +10,9 @@ class Point extends Model
  protected $primaryKey = 'point_id';
  protected $table = 'm_point';
 
- public function genre ()
+
+ public function circle_point()
  {
-  return $this->belongsTo('App\Genre');
- }
- public function getData()
- {
-  return $this->genre->genre_name;
+  return $this->hasMany('App\Circle_Point');
  }
 }
