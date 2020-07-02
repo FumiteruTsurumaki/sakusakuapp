@@ -120,4 +120,9 @@ class circle extends Model
   {
    return $this->belongsTo('App\User');
   }
+
+  public function circle_point()
+  {
+   return $this->hasMany('App\Circle_Point');
+  }
 }

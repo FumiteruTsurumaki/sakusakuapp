@@ -7,6 +7,7 @@ use App\Http\Requests\HelloRequest;
 use App\Genre;
 use App\Point;
 use App\circle;
+use App\Circle_Point;
 use Illuminate\Support\Facades\Auth;
 
 class CreateController extends Controller
@@ -31,6 +32,10 @@ class CreateController extends Controller
 
     $form = $request->all();
     unset($form['_token']);
+//     echo "<pre>";
+//     var_dump($form);
+//     echo "<pre>";
+//     exit;
     $request->session()->put('id', $form);
 
     return view('create.create2',['user' => $user]);

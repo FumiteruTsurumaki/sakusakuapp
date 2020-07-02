@@ -33,7 +33,6 @@ class SearchController extends Controller
     $point = (array_key_exists('point' , $form)) ? $form['point'] : false;
 
     $items = circle::universityEqual($form['keyword_input'])
-    ->Number($form['select_number'])
     ->Genre($genre)
     ->Point($point)
     ->get();
