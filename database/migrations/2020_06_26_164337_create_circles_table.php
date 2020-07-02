@@ -13,20 +13,33 @@ class CreateCirclesTable extends Migration
      */
     public function up()
     {
-        Schema::create('circles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id');
+       Schema::create('circles', function (Blueprint $table) {
+           /**
+            * サークルid
+            * ユーザーid
+            * サークル名
+            * ジャンル
+            * PR文
+            * LINEリンク
+            * Twitterリンク
+            * instagramリンク
+            * facebookリンク
+            * blogリンク
+            * 作成日・更新日
+            * 削除日
+            */
+            $table->bigIncrements('id');
+            $table->foreignId('user_id')->constrained();
             $table->string('name', 255);
-            $table->integer('genre_id');
+            $table->integer('genre_id')->constrained();
             $table->text('pr_text')->nullable();
             $table->string('line', 255)->nullable();
             $table->string('twitter', 255)->nullable();
             $table->string('instagram', 255)->nullable();
             $table->string('facebook', 255)->nullable();
             $table->string('blog', 255)->nullable();
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
-            $table->timestamps('deleted_at');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -13,9 +13,13 @@ class CreateOlacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('olaces', function (Blueprint $table) {
+        Schema::create('places', function (Blueprint $table) {
+           /**
+            * id
+            * 練習場所
+            */
             $table->increments('id');
-            $table->string('name', 255)->nullable();
+            $table->string('name', 255);
         });
     }
 
@@ -26,6 +30,6 @@ class CreateOlacesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('olaces');
+        Schema::dropIfExists('places');
     }
 }

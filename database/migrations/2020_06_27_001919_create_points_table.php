@@ -13,9 +13,13 @@ class CreatePointsTable extends Migration
      */
     public function up()
     {
-        Schema::create('points', function (Blueprint $table) {
+       Schema::create('points', function (Blueprint $table) {
+         /**
+          * ポイントid
+          * ポイント名
+          */
            $table->increments('id');
-           $table->string('name', 255)->nullable();
+           $table->string('name', 255);
         });
     }
 

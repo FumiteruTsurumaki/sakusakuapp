@@ -14,9 +14,14 @@ class CreateCirclePointTable extends Migration
     public function up()
     {
         Schema::create('circle_point', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('point_id')->nullable();
-            $table->integer('circle_id')->nullable();
+           /**
+            * id
+            * ポイントid
+            * サークルid
+            */
+            $table->id();
+            $table->integer('point_id')->constrained;
+            $table->integer('circle_id')->constrained;
         });
     }
 
