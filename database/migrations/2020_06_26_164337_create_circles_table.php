@@ -14,32 +14,18 @@ class CreateCirclesTable extends Migration
     public function up()
     {
        Schema::create('circles', function (Blueprint $table) {
-           /**
-            * サークルid
-            * ユーザーid
-            * サークル名
-            * ジャンル
-            * PR文
-            * LINEリンク
-            * Twitterリンク
-            * instagramリンク
-            * facebookリンク
-            * blogリンク
-            * 作成日・更新日
-            * 削除日
-            */
-            $table->bigIncrements('id');
-            $table->foreignId('user_id')->constrained();
-            $table->string('name', 255);
-            $table->integer('genre_id')->constrained();
-            $table->text('pr_text')->nullable();
-            $table->string('line', 255)->nullable();
-            $table->string('twitter', 255)->nullable();
-            $table->string('instagram', 255)->nullable();
-            $table->string('facebook', 255)->nullable();
-            $table->string('blog', 255)->nullable();
-            $table->timestamps();
-            $table->softDeletes();
+            $table->id()->comment('サークルid');
+            $table->foreignId('user_id')->constrained()->comment('ユーザーid');
+            $table->string('name', 255)->comment('サークル名');
+            $table->integer('genre_id')->constrained()->comment('ジャンル');
+            $table->text('pr_text')->nullable()->comment('PR文');
+            $table->string('line', 255)->nullable()->comment('LINEリンク');
+            $table->string('twitter', 255)->nullable()->comment('twitterリンク');
+            $table->string('instagram', 255)->nullable()->comment('instagramリンク');
+            $table->string('facebook', 255)->nullable()->comment('facebookリンク');
+            $table->string('blog', 255)->nullable()->comment('blogリンク');
+            $table->timestamps()->comment('作成日・更新日');
+            $table->softDeletes()->comment('削除日');
         });
     }
 
