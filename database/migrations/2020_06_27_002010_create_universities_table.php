@@ -14,7 +14,7 @@ class CreateUniversitiesTable extends Migration
     public function up()
     {
         Schema::create('universities', function (Blueprint $table) {
-            $table->increments('id')->comment('id');
+            $table->id()->comment('id');
             $table->string('name', 255)->comment('大学名');
         });
     }

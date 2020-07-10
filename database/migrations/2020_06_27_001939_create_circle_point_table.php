@@ -15,8 +15,8 @@ class CreateCirclePointTable extends Migration
     {
         Schema::create('circle_point', function (Blueprint $table) {
             $table->id()->comment('id');
-            $table->integer('point_id')->constrained->comment('ポイントid');
-            $table->integer('circle_id')->constrained->comment('サークルid');
+            $table->foreignId('point_id')->constrained;
+            $table->foreignId('circle_id')->constrained;
         });
     }
 

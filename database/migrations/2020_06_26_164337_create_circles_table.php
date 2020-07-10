@@ -24,8 +24,8 @@ class CreateCirclesTable extends Migration
             $table->string('instagram', 255)->nullable()->comment('instagramリンク');
             $table->string('facebook', 255)->nullable()->comment('facebookリンク');
             $table->string('blog', 255)->nullable()->comment('blogリンク');
-            $table->timestamps()->comment('作成日・更新日');
-            $table->softDeletes()->comment('削除日');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

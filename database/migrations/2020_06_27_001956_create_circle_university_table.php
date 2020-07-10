@@ -14,9 +14,9 @@ class CreateCircleUniversityTable extends Migration
     public function up()
     {
       Schema::create('circle_university', function (Blueprint $table) {
-           $table->increments('id')->comment('id');
-           $table->integer('university_id')->constrained->comment('大学id');
-           $table->integer('circle_id')->constrained->comment('サークルid');
+           $table->id()->comment('id');
+           $table->foreignId('university_id')->constrained;
+           $table->foreignId('circle_id')->constrained;
       });
     }
 
